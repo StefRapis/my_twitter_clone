@@ -1,0 +1,29 @@
+.Input {
+  /* border: 2px solid red; */
+  padding: 15px 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.Input .input_picture {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.Input img {
+  width: 25px;
+  height: 25px;
+}
+
+.Input input {
+  width: 80%;
+  height: 25px;
+  background-color: #e6ecf0;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+}

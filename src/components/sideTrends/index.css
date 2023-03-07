@@ -1,0 +1,21 @@
+.SideTrends {
+  /* border: 2px solid green; */
+  height: 100vh;
+}
+
+.SideTrends .trend_links {
+  border-bottom: 1px solid lightblue;
+}
+
+.SideTrends .trend_links ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  padding: 5px 10px;
+}
+
+.SideTrends .trend_links ul li {
+  list-style: none;
+  font-weight: bold;
+  color: gray;
+}

@@ -1,0 +1,23 @@
+.TrendItem {
+  border-bottom: 1px solid lightblue;
+  /* border: 2px solid red; */
+  padding: 5px 10px;
+}
+
+.TrendItem .trend_info {
+  line-height: 0.4;
+  /* border: 2px solid yellow; */
+}
+
+.TrendItem .trend_info .trend_where {
+  font-size: 1rem;
+  color: gray;
+}
+
+.TrendItem .trend_info .trend_title {
+  font-size: 1.2rem;
+}
+
+.TrendItem .trend_info p {
+  font-size: 1rem;
+}

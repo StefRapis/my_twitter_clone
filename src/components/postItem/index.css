@@ -1,0 +1,47 @@
+.PostItem {
+  /* border: 2px solid orange; */
+  padding: 15px 10px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid lightblue;
+}
+
+.PostItem .profile_picture {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.post_content {
+  /* border: 2px solid lightcoral; */
+}
+
+.post_info {
+  /* border: 2px solid green; */
+  width: 80%;
+}
+
+.post_info .post_name {
+  /* border: 2px solid brown; */
+  display: flex;
+  gap: 2px;
+}
+
+.post_info .post_name .span_name {
+  font-weight: bold;
+}
+
+.post_info .post_name .span_email {
+  color: gray;
+}
+
+.post_icons {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.post_icons img {
+  width: 20px;
+  height: 20px;
+}

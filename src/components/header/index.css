@@ -1,0 +1,37 @@
+.Header {
+  padding: 5px 12px;
+  border-bottom: 1px solid lightblue;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger_menu {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 28px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.burger_menu .burger_line {
+  background-color: #70bfff;
+  width: 30px;
+  height: 6px;
+  border-radius: 2px;
+}
+
+.Header .twitter_logo {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.Header .sparkles_icon {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
