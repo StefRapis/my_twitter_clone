@@ -1,17 +1,33 @@
 import "./index.css";
+import { useState, useEffect } from "react";
 
 const PostItem = ({ postData }) => {
-  const { photo, userName, body, email } = postData;
+  // destructuring dell'oggetto che arriva dalla fetch per "posts" in PostList
+  const { title, body, tags, userId } = postData;
+
+  // useState per memorizzare solo dati dell'utente della seconda fetch
+  const [userData, setUserData] = useState({});
+
+  // altra fetch per raccogliere solo l'user Id (che viene preso dai dati della prima fetch) in modo da avere ulteriori dati da includere nel componente
+  useEffect(() => {
+    fetch(`https://dummyjson.com/users/${userId}`)
+      .then((res) => res.json())
+      .then((data) => setUserData(data));
+  }, []);
 
   return (
     <div className="PostItem">
-      <img className="profile_picture" src={photo} alt="profile picture" />
+      <img
+        className="profile_picture"
+        src={userData.image}
+        alt="profile picture"
+      />
 
       <div className="post_info">
         <div className="post_content">
           <div className="post_name">
-            <span className="span_name">{userName}</span>
-            <span className="span_email">{email}</span>
+            <span className="span_name">{userData.firstName}</span>
+            <span className="span_email">{tags.join(" - ")}</span>
           </div>
 
           <p>{body}</p>

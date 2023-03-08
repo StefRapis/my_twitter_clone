@@ -12,11 +12,19 @@ Trovate in allegato i grafici che abbiamo realizzato a lezione
 Avanzato
 Completare tutta l'applicazione ad esclusione del componente <TrendItem />
 
-/////////////////////////////////////////////////////////////////////////////////////////*/
+/////////////////////////////////////////////////////////////////////////////////////////
+
+Esercizio 08-03-2023
+Sulla base della lezione del giorno, sostituire tutta la logica relativa ai componenti, interni a <Content /> di modo che non utilizzino più i mocks ma che prendano dai seguenti indirizzi le informazioni necessarie:
+
+https://dummyjson.com/posts
+https://dummyjson.com/users
+Avanzato
+Creare un mock personalizzato per la lista dei trends e arricchirla a piacere. */
 
 import "./App.css";
 import Content from "./components/content";
-import SideMenu from "./components/sideMenu";
+// import SideMenu from "./components/sideMenu";
 import Footer from "./components/footer";
 import SideTrends from "./components/sideTrends";
 
@@ -24,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <Content />
-      <SideMenu />
+      {/* <SideMenu /> */}
       <Footer />
       <SideTrends />
     </div>

@@ -1,10 +1,11 @@
 import "./index.css";
 
-const SideMenu = () => {
+const SideMenu = ({ menuOpen, setMenuOpen }) => {
   return (
-    <div className="SideMenu">
+    <div className={`SideMenuOn ${menuOpen ? "SideMenuOff" : ""} `}>
       <img
         className="twitter_logo"
+        onClick={() => setMenuOpen(false)}
         src="https://img.icons8.com/stickers/512/twitter.png"
         alt="twitter logo"
       />

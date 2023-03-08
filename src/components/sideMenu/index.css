@@ -1,7 +1,7 @@
-.SideMenu {
-  visibility: hidden;
+.SideMenuOn {
   /* border: 2px solid rgb(69, 147, 173); */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   gap: 20px;
   height: 100vh;
@@ -11,6 +11,11 @@
   top: 0;
   left: 0;
   padding: 20px 30px;
+}
+
+.SideMenuOff {
+  /* border: 2px solid red; */
+  display: flex;
 }
 
 .twitter_logo {
