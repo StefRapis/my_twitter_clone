@@ -15,6 +15,19 @@ const PostItem = ({ postData }) => {
       .then((data) => setUserData(data));
   }, []);
 
+  // funzione count del cuoricino
+  const [heartFill, setHeartFill] = useState(false);
+  // funzione count del cuoricino
+  const [heartCount, setHeartCount] = useState(0);
+
+  const fillHeart = () => {
+    setHeartFill((prev) => !prev);
+  };
+
+  // const countHeart = () => {
+  //   setHeartCount((prev) => prev + 1);
+  // };
+
   return (
     <div className="PostItem">
       <img
@@ -43,9 +56,15 @@ const PostItem = ({ postData }) => {
             alt="retweet"
           />
           <img
-            src="https://img.icons8.com/ios-glyphs/512/hearts.png"
+            onClick={fillHeart}
+            src={
+              heartFill
+                ? "https://img.icons8.com/offices/512/hearts.png"
+                : "https://img.icons8.com/ios-glyphs/512/hearts.png"
+            }
             alt="heart"
           />
+          {/* <p>{heartCount}</p> */}
           <img
             src="https://img.icons8.com/ios/512/send-letter.png"
             alt="upload"

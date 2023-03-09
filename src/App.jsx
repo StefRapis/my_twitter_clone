@@ -37,14 +37,17 @@ Sfruttare la input presente nel componente <Header /> al fine di eseguire un fil
 // USEREF: HO SOLO AVUTO ACCESSO ALLE PROPRIETA' DEL FOOTER TRAMITE PULSANTE CONTENUTO IN ESSO
 
 import "./App.css";
+import SideMenuDesktop from "./components/sideMenuDesktop";
 import Content from "./components/content";
 // import SideMenu from "./components/sideMenu";
 import Footer from "./components/footer";
+
 import SideTrends from "./components/sideTrends";
 
 function App() {
   return (
     <div className="App">
+      <SideMenuDesktop />
       <Content />
       <Footer />
       <SideTrends />
