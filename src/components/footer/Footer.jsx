@@ -1,8 +1,18 @@
 import "./index.css";
+import { useRef } from "react";
 
 const Footer = () => {
+  const footerRef = useRef(null);
+
+  const showDivInfo = () => {
+    console.log(footerRef);
+  };
+
   return (
-    <div className="Footer">
+    <div className="Footer" ref={footerRef}>
+      <button className="footer_btn" onClick={showDivInfo}>
+        lights Off
+      </button>
       <img src="https://img.icons8.com/ios/512/exterior.png" alt="house icon" />
 
       <img

@@ -1,5 +1,7 @@
 .Content {
   /* border: 2px solid red; */
-  position: relative;
+  border-right: 1px solid lightblue;
+
+  /* position: relative; */
   /* width: 100%; */
 }
