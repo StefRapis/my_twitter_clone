@@ -2,11 +2,11 @@ import "./index.css";
 import Header from "../header";
 import PostList from "../postList";
 
-const Content = () => {
+const Content = ({ setModalOpen }) => {
   return (
     <div className="Content">
       <Header />
-      <PostList />
+      <PostList setModalOpen={setModalOpen} />
     </div>
   );
 };

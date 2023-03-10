@@ -36,19 +36,31 @@ Sfruttare la input presente nel componente <Header /> al fine di eseguire un fil
 
 // USEREF: HO SOLO AVUTO ACCESSO ALLE PROPRIETA' DEL FOOTER TRAMITE PULSANTE CONTENUTO IN ESSO
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Esercizio 10-03-2023
+Sulla base della lezione del giorno, ricreare una sezione o modale che permetta la modifica di ogni singolo messaggio al click su apposito elemento. 
+Per lo stile di questa modale o sezione seguite pure quanto fatto a lezione o siate più creativi! */
+
+import { useState } from "react";
 import "./App.css";
+import Modal from "./components/modal";
 import SideMenuDesktop from "./components/sideMenuDesktop";
 import Content from "./components/content";
-// import SideMenu from "./components/sideMenu";
 import Footer from "./components/footer";
-
 import SideTrends from "./components/sideTrends";
 
 function App() {
+  // useState per visibilitá della modale modifica Tweet
+  const [isModalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="App">
+      {isModalOpen && <Modal setModalOpen={setModalOpen} />}
+
+      {/* <Modal /> */}
       <SideMenuDesktop />
-      <Content />
+      <Content setModalOpen={setModalOpen} />
       <Footer />
       <SideTrends />
     </div>

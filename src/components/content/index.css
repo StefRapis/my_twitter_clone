@@ -5,3 +5,9 @@
   /* position: relative; */
   width: 80%;
 }
+
+@media screen and (max-width: 700px) {
+  .Content {
+    width: 100%;
+  }
+}

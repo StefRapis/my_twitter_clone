@@ -18,3 +18,9 @@
   font-weight: bold;
   color: gray;
 }
+
+@media screen and (max-width: 700px) {
+  .SideTrends {
+    width: 100%;
+  }
+}

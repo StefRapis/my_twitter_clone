@@ -1,7 +1,7 @@
 import "./index.css";
 import { useState, useEffect } from "react";
 
-const PostItem = ({ postData }) => {
+const PostItem = ({ postData, setModalOpen }) => {
   // destructuring dell'oggetto che arriva dalla fetch per "posts" in PostList
   const { title, body, tags, userId } = postData;
 
@@ -19,6 +19,11 @@ const PostItem = ({ postData }) => {
   const [heartFill, setHeartFill] = useState(false);
   // funzione count del cuoricino
   const [heartCount, setHeartCount] = useState(0);
+
+  // funzione visibilita modale modifica tweet
+  const onClickModalOpen = () => {
+    setModalOpen((prev) => !prev);
+  };
 
   const fillHeart = () => {
     setHeartFill((prev) => !prev);
@@ -39,7 +44,7 @@ const PostItem = ({ postData }) => {
       <div className="post_info">
         <div className="post_content">
           <div className="post_name">
-            <span className="span_name">{userData.firstName}</span>
+            <span className="span_name">{title}</span>
             <span className="span_email">{tags.join(" - ")}</span>
           </div>
 
@@ -52,7 +57,8 @@ const PostItem = ({ postData }) => {
             alt="comments"
           />
           <img
-            src="https://img.icons8.com/material-outlined/512/retweet.png"
+            onClick={onClickModalOpen}
+            src="https://img.icons8.com/color/512/retweet.png"
             alt="retweet"
           />
           <img

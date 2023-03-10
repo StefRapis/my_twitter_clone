@@ -5,7 +5,7 @@ import PostItem from "../postItem";
 // 1. importo useState e useEffet per poterli utilizzare sul componente
 import { useState, useEffect } from "react";
 
-const PostList = () => {
+const PostList = ({ setModalOpen }) => {
   // 2. variabile per salvare valore di array che arriva dalla fetch, le parentesi sono vuote in attesa di essere riempite
   const [post, setPost] = useState([]);
 
@@ -20,7 +20,7 @@ const PostList = () => {
   return (
     <div className="PostList">
       {post.map((item) => (
-        <PostItem postData={item} />
+        <PostItem postData={item} setModalOpen={setModalOpen} />
       ))}
     </div>
   );
