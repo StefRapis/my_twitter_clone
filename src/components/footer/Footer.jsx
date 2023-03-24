@@ -10,9 +10,9 @@ const Footer = () => {
 
   return (
     <div className="Footer" ref={footerRef}>
-      <button className="footer_btn" onClick={showDivInfo}>
+      {/* <button className="footer_btn" onClick={showDivInfo}>
         lights Off
-      </button>
+      </button> */}
       <img src="https://img.icons8.com/ios/512/exterior.png" alt="house icon" />
 
       <img

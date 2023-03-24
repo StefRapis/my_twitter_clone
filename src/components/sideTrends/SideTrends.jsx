@@ -2,7 +2,7 @@ import "./index.css";
 import Input from "../input";
 import TrendList from "../trendList";
 
-const SideTrends = () => {
+const SideTrends = ({}) => {
   return (
     <div className="SideTrends">
       <Input />

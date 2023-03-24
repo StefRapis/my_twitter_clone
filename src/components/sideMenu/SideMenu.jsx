@@ -4,7 +4,7 @@ const SideMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div className={`SideMenuOn ${menuOpen ? "SideMenuOff" : ""} `}>
       <img
-        className="twitter_logo"
+        className="twitter_logo_1"
         onClick={() => setMenuOpen(false)}
         src="https://img.icons8.com/stickers/512/twitter.png"
         alt="twitter logo"

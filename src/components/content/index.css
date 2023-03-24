@@ -1,6 +1,8 @@
 .Content {
   /* border: 2px solid red; */
   border-right: 1px solid lightblue;
+  height: 100vh;
+  overflow: scroll;
 
   /* position: relative; */
   width: 80%;
